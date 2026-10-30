@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teamwork, Professionalism, and Workplace Etiquette — Pre-Test Quiz</title>
+
+<style>
+:root {
+  --primary-bg: #090d16;
+  --card-bg: rgba(15, 23, 42, 0.85);
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.3);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #00e5ff;
+  --success: #22c55e;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Segoe UI", Roboto, Helvetica, Arial, sans-serif;}
+
+body{
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    color: var(--text-main);
+    min-height: 100vh;
+    padding-bottom: 0;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flash-alert {
+    animation: flash 0.4s alternate infinite;
+}
+@keyframes flash {
+    from { background: black; }
+    to { background: transparent; }
+}
+
+/* =====================================================
+   PRINT / PDF STYLES: ELEGANT BUSINESS CERTIFICATE
+===================================================== */
+#certificatePrintArea {
+    display: none;
+}
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+    body * {
+        visibility: hidden !important;
+    }
+    #certificatePrintArea, #certificatePrintArea * {
+        visibility: visible !important;
+    }
+    #certificatePrintArea {
+        display: block !important;
+        position: fixed !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        margin: 0 !important;
+        padding: 25px !important;
+        background: #ffffff !important;
+        color: #0f172a !important;
+        box-sizing: border-box !important;
+        z-index: 999999 !important;
+    }
+    #certificatePrintArea {
+        display: block !important;
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        margin: 0 !important;
+        padding: 18px !important;
+        background: #f4f1e9 !important;
+        color: #13233b !important;
+        box-sizing: border-box !important;
+        z-index: 999999 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    .cert-frame {
+        height: 100% !important;
+        box-sizing: border-box !important;
+        padding: 25px 42px 20px !important;
+        border: 2px solid #b99a56 !important;
+        outline: 1px solid #13233b !important;
+        outline-offset: -9px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        text-align: center !important;
+        background: #fffdf8 !important;
+        position: relative !important;
+        overflow: hidden !important;
+        isolation: isolate !important;
+    }
+    .cert-watermark {
+        position: absolute !important;
+        right: 60px !important;
+        top: 115px !important;
+        z-index: -1 !important;
+        color: rgba(185,154,86,.08) !important;
+        font-family: Georgia, serif !important;
+        font-size: 180px !important;
+        font-weight: 800 !important;
+        letter-spacing: -12px !important;
+    }
+    .cert-topline, .cert-bottomline {
+        width: 100% !important;
+        color: #8a713d !important;
+        font-size: 8px !important;
+        font-weight: 700 !important;
+        letter-spacing: 2.2px !important;
+    }
+    .cert-header {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 17px !important;
+        padding: 8px 0 14px !important;
+        border-bottom: 1px solid #ded5c3 !important;
+    }
+    .cert-logo { height: 58px !important; width: auto !important; }
+    .cert-header-copy { text-align: left !important; }
+    .cert-inst-title {
+        font-family: Georgia, serif !important;
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        color: #13233b !important;
+        letter-spacing: .3px !important;
+    }
+    .cert-subtitle {
+        margin-top: 4px !important;
+        color: #8a713d !important;
+        font-size: 9px !important;
+        font-weight: 700 !important;
+        letter-spacing: .6px !important;
+        text-transform: uppercase !important;
+    }
+    .cert-subject-mark {
+        margin-left: auto !important;
+        border-left: 2px solid #b99a56 !important;
+        padding-left: 12px !important;
+        color: #13233b !important;
+        font-size: 10px !important;
+        line-height: 1.5 !important;
+        letter-spacing: 1.5px !important;
+        font-weight: 800 !important;
+        text-align: left !important;
+    }
+    .cert-title-area { margin-top: 4px !important; }
+    .cert-eyebrow {
+        color: #8a713d !important;
+        font-size: 9px !important;
+        font-weight: 800 !important;
+        letter-spacing: 3px !important;
+    }
+    .cert-main-title {
+        margin-top: 6px !important;
+        color: #13233b !important;
+        font-family: Georgia, serif !important;
+        font-size: 30px !important;
+        font-weight: 700 !important;
+        letter-spacing: .4px !important;
+    }
+    .cert-rule {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 10px !important;
+        margin: 7px auto 9px !important;
+    }
+    .cert-rule span { display: block !important; width: 75px !important; border-top: 1px solid #b99a56 !important; }
+    .cert-diamond { color: #b99a56 !important; font-size: 9px !important; }
+    .cert-recipient-label {
+        color: #667085 !important;
+        font-size: 9px !important;
+        letter-spacing: 3px !important;
+        font-weight: 700 !important;
+    }
+    .cert-student-name {
+        display: inline-block !important;
+        min-width: 360px !important;
+        margin: 5px 0 7px !important;
+        padding: 0 20px 4px !important;
+        border-bottom: 1px solid #b99a56 !important;
+        color: #13233b !important;
+        font-family: Georgia, serif !important;
+        font-size: 30px !important;
+        font-style: italic !important;
+        font-weight: 700 !important;
+    }
+    .cert-meta-info {
+        color: #667085 !important;
+        font-size: 9px !important;
+        font-weight: 700 !important;
+        letter-spacing: .4px !important;
+    }
+    .meta-divider { color: #b99a56 !important; padding: 0 7px !important; }
+    .cert-body {
+        max-width: 790px !important;
+        margin: 5px 0 !important;
+        color: #455166 !important;
+        font-size: 11px !important;
+        line-height: 1.65 !important;
+    }
+    .cert-body strong { color: #13233b !important; }
+    .cert-score-card {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 35px !important;
+        padding: 10px 35px !important;
+        border: 1px solid #ded5c3 !important;
+        border-top: 2px solid #b99a56 !important;
+        background: #f8f5ed !important;
+    }
+    .cert-score-item { display: flex !important; flex-direction: column !important; gap: 3px !important; color: #13233b !important; }
+    .cert-score-label { font-size: 8px !important; font-weight: 800 !important; letter-spacing: 1.2px !important; color: #667085 !important; }
+    .cert-score-val { font-family: Georgia, serif !important; font-size: 23px !important; font-weight: 700 !important; color: #13233b !important; }
+    .cert-score-val small { font-family: "Segoe UI", sans-serif !important; font-size: 11px !important; color: #8a713d !important; }
+    .cert-score-divider { height: 36px !important; border-left: 1px solid #d6c9ae !important; }
+    .cert-footer-grid {
+        width: 100% !important;
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: space-between !important;
+        gap: 25px !important;
+        padding: 0 20px !important;
+        margin-top: 4px !important;
+    }
+    .cert-date-block { color: #455166 !important; text-align: left !important; font-size: 9px !important; line-height: 1.65 !important; }
+    .cert-date-block strong { color: #13233b !important; }
+    .cert-footer-label { margin-bottom: 4px !important; color: #8a713d !important; font-size: 8px !important; font-weight: 800 !important; letter-spacing: 1.4px !important; }
+    .cert-signature-block { min-width: 280px !important; text-align: center !important; }
+    .cert-signature-script {
+        margin: 0 auto -2px !important;
+        color: #173f73 !important;
+        font-family: "Brush Script MT", "Segoe Script", cursive !important;
+        font-size: 27px !important;
+        font-style: italic !important;
+        font-weight: 600 !important;
+        transform: rotate(-5deg) !important;
+    }
+    .cert-signature-line { width: 250px !important; margin: 4px auto !important; border-top: 1px solid #13233b !important; }
+    .cert-teacher-name { color: #13233b !important; font-size: 10px !important; font-weight: 800 !important; }
+    .cert-teacher-title { margin-top: 3px !important; color: #667085 !important; font-size: 8px !important; letter-spacing: .7px !important; text-transform: uppercase !important; }
+
+    /* Force the certificate to occupy exactly one A4 landscape page. */
+    html, body {
+        width: 297mm !important;
+        height: 210mm !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+    #certificatePrintArea {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 297mm !important;
+        height: 210mm !important;
+        min-height: 0 !important;
+        max-height: 210mm !important;
+        padding: 8mm !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        page-break-before: avoid !important;
+        page-break-after: avoid !important;
+        break-before: avoid-page !important;
+        break-after: avoid-page !important;
+    }
+    .cert-frame {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        max-height: 100% !important;
+        padding: 18px 34px 14px !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid-page !important;
+    }
+    .cert-signature-block {
+        min-width: 280px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        text-align: center !important;
+    }
+    .cert-signature-script {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+        line-height: 1.05 !important;
+        margin: 0 auto -2px !important;
+        transform: rotate(-5deg) !important;
+        transform-origin: center center !important;
+    }
+    .cert-signature-line { display: block !important; margin: 4px auto !important; } 
+}
+
+/* FULLSCREEN OVERLAY ON OPEN */
+#startModalOverlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(9, 13, 22, 0.96);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+#startModalOverlay h2 {
+    color: var(--accent);
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+#startModalOverlay p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 24px;
+    max-width: 550px;
+    line-height: 1.5;
+}
+.btn-start-exam {
+    padding: 16px 36px;
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--accent);
+    color: #0f172a;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 20px var(--accent-glow);
+    transition: all 0.3s ease;
+}
+.btn-start-exam:hover {
+    background: #7dd3fc;
+    transform: scale(1.05);
+}
+
+/* ACTIONS BAR */
+.actions-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 36px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+}
+.home-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    background: rgba(30, 41, 59, 0.6);
+    color: var(--accent);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+.home-btn:hover {
+    background: var(--accent);
+    color: #0f172a;
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.header{
+    text-align:center;
+    padding:20px 20px 10px;
+    background: rgba(9, 13, 22, 0.8);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    margin-bottom: 20px;
+}
+.header img{height:90px; width:auto; filter: drop-shadow(0 0 10px var(--accent-glow));}
+.header .orientation-banner{display:block;width:min(100%,1450px);height:auto;max-height:none;object-fit:contain;margin:0 auto 18px;border:2px solid #d8b45b;border-radius:12px;box-shadow:0 8px 28px rgba(0,0,0,.45);}
+.header{padding:22px 18px 18px}
+.header h1{max-width:1150px;margin:12px auto;font-size:clamp(21px,2.4vw,34px);line-height:1.25}
+.header h1{color: var(--accent); font-size: 24px; font-weight: 700; margin-top: 8px;}
+.header h2{color: var(--text-main); font-size: 18px; font-weight: 500;}
+.header h3{color: var(--text-muted); font-size: 14px; font-weight: 400;}
+
+.timer{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:20px;
+    color: var(--accent);
+    background: rgba(15, 23, 42, 0.9);
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+.timer-wrapper{text-align:center;}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+    background: var(--card-bg);
+    padding:28px;
+    border-radius:16px;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+}
+
+.info-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:28px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.info-table td{
+    border:1px solid rgba(56, 189, 248, 0.3);
+    padding:10px 12px;
+    font-size: 14px;
+}
+.info-table td.label{
+    font-weight:bold;
+    background:rgba(0, 229, 255, 0.12);
+    width:18%;
+    color: var(--accent);
+}
+.info-table input{
+    width:98%;
+    padding:6px 10px;
+    background:rgba(255,255,255,0.95);
+    border:1px solid var(--border-color);
+    border-radius:4px;
+    color:#0f172a;
+    font-size:14px;
+    font-weight: 500;
+}
+
+.section-card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.passage-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    padding-bottom: 12px;
+}
+
+.passage-header h3 {
+    color: var(--accent);
+    font-size: 18px;
+}
+
+.passage-img-container {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.passage-img {
+    width: 100%;
+    max-width: 750px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.reading-passage-text p {
+    color: var(--text-main);
+    line-height: 1.7;
+    margin-bottom: 12px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+/* Topic infographics shown alongside every fifth question */
+.topic-infographic-card {
+    border: 1px solid rgba(56, 189, 248, 0.55);
+    border-radius: 10px;
+    padding: 10px;
+    background: rgba(8, 20, 38, 0.94);
+    box-shadow: 0 5px 18px rgba(0,0,0,.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden;
+}
+.topic-infographic-card h4 {
+    width: 100%;
+    text-align: center;
+    color: #fbbf24;
+    font-size: 13px;
+    line-height: 1.35;
+    margin: 0 0 8px;
+}
+.topic-infographic-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 330px;
+    object-fit: contain;
+    border-radius: 6px;
+    cursor: zoom-in;
+}
+@media (max-width: 768px) {
+    .topic-infographic-card img { max-height: none; }
+}
+
+/* SIDE BY SIDE GRID CONTAINER FOR QUESTIONS */
+.questions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+    .questions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.question{
+    border:1px solid rgba(56, 189, 248, 0.3);
+    padding:16px;
+    margin-bottom: 0;
+    border-radius:8px;
+    background:rgba(15, 23, 42, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.question-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.choice{
+    padding:10px 14px;
+    margin:6px 0;
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:6px;
+    cursor:pointer;
+    transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 14.5px;
+}
+.choice:hover{
+    background:rgba(56, 189, 248, 0.2);
+    border-color: var(--accent);
+}
+.choice.selected{
+    background:#38bdf8;
+    color:#0f172a;
+    font-weight:bold;
+    border-color:#38bdf8;
+}
+
+/* Locked state after choosing an answer */
+.question.locked .choice {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+.question.locked .choice.selected {
+    opacity: 1;
+}
+
+button{
+    padding:12px 28px;
+    font-size:16px;
+    border:none;
+    border-radius:8px;
+    margin:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition: all 0.25s ease;
+}
+.btn-submit{background:var(--accent);color:#090d16}
+.btn-submit:hover{background:#7dd3fc; box-shadow: 0 0 15px var(--accent-glow);}
+.btn-print{background:var(--success);color:#fff}
+.btn-print:hover{background:#16a34a}
+
+/* RETAKE POPUP MODAL */
+#retakeModalOverlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 10001;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal-card {
+    background: #0f172a;
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+.modal-card h3 {
+    color: var(--accent);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.modal-card p {
+    color: var(--text-main);
+    font-size: 16px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.btn-modal-yes {
+    background: var(--accent);
+    color: #0f172a;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.btn-modal-no {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: rgba(9, 13, 22, 0.95);
+    border-top: 1px solid rgba(56, 189, 248, 0.25);
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13.5px;
+    margin-top: auto;
+}
+footer strong {
+    color: var(--accent);
+}
+
+/* SECURITY WARNING OVERLAY */
+#securityOverlay{
+    position:fixed;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.92);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    animation:blink 0.6s infinite;
+}
+
+#securityOverlay h1{
+    color:#fff;
+    font-size:36px;
+    text-align:center;
+    line-height: 1.4;
+}
+
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0.2;}
+    100%{opacity:1;}
+}
+
+.freeze *{
+    pointer-events:none !important;
+}
+
+#result{
+    text-align:center;
+    font-size:20px;
+    margin-top:24px;
+    padding:20px;
+    background:rgba(0,229,255,0.1);
+    border-radius:10px;
+    border:1px solid var(--border-color);
+    display:none;
+}
+
+
+/* DIGITAL BUSINESS TECHNOLOGY CERTIFICATE REDESIGN */
+@media print {
+  #certificatePrintArea { background:#071a2b !important; color:#102a43 !important; padding:8mm !important; }
+  .cert-frame {
+    background:linear-gradient(135deg,#ffffff 0%,#f3fbff 100%) !important;
+    border:3px solid #087e8b !important;
+    outline:1px solid #e2b857 !important;
+    outline-offset:-10px !important;
+    box-shadow:inset 0 0 0 7px rgba(8,126,139,.08) !important;
+    padding:18px 36px 14px !important;
+  }
+  .cert-watermark { color:rgba(8,126,139,.07) !important; font-family:'Segoe UI',sans-serif !important; font-size:150px !important; letter-spacing:-8px !important; }
+  .cert-topline,.cert-bottomline { color:#087e8b !important; font-size:8px !important; letter-spacing:2px !important; }
+  .cert-header { border-bottom:2px solid #b8e1e7 !important; }
+  .cert-inst-title { color:#102a43 !important; font-family:'Segoe UI',sans-serif !important; font-size:20px !important; }
+  .cert-subtitle,.cert-eyebrow,.cert-footer-label { color:#087e8b !important; }
+  .cert-subject-mark { color:#087e8b !important; border-left:3px solid #e2b857 !important; }
+  .cert-main-title { color:#102a43 !important; font-family:'Segoe UI',sans-serif !important; font-size:28px !important; letter-spacing:.1px !important; }
+  .cert-rule span { border-color:#e2b857 !important; }
+  .cert-diamond,.meta-divider { color:#e2b857 !important; }
+  .cert-student-name { color:#087e8b !important; border-bottom:2px solid #e2b857 !important; font-family:'Segoe UI',sans-serif !important; font-style:normal !important; }
+  .cert-score-card { background:#eaf7fa !important; border:1px solid #b8e1e7 !important; border-top:3px solid #087e8b !important; border-radius:10px !important; }
+  .cert-score-val { color:#102a43 !important; }
+  .cert-score-val small { color:#087e8b !important; }
+  .cert-score-divider { border-color:#b8e1e7 !important; }
+  .cert-signature-line { border-color:#087e8b !important; }
+  .cert-teacher-name { color:#102a43 !important; }
+  .cert-body strong,.cert-date-block strong { color:#102a43 !important; }
+}
+
+
+/* =====================================================
+   CHUMPHON VOCATIONAL COLLEGE — INDEX.HTML VISUAL THEME
+   Screen-only overrides: navy, teal, gold, and clean paper
+===================================================== */
+@media screen {
+  :root {
+    --primary-bg: #f4f8fb;
+    --card-bg: #ffffff;
+    --accent: #27c2b8;
+    --accent-glow: rgba(39,194,184,.22);
+    --text-main: #17324d;
+    --text-muted: #60758a;
+    --border-color: #27c2b8;
+    --success: #087d78;
+    --navy: #102a43;
+    --navy2: #173f5f;
+    --teal: #27c2b8;
+    --gold: #ffbd59;
+  }
+  body {
+    background: #f4f8fb !important;
+    color: #17324d !important;
+    font-family: "Segoe UI", Arial, sans-serif !important;
+    line-height: 1.6;
+  }
+  .actions-bar {
+    padding: 14px clamp(18px,5vw,72px) !important;
+    background: linear-gradient(120deg,#102a43,#173f5f) !important;
+    border-bottom: 4px solid #27c2b8 !important;
+    color: #d7e8f2 !important;
+    box-shadow: 0 5px 18px rgba(16,42,67,.12);
+  }
+  .actions-bar > div { color:#d7e8f2 !important; }
+  .actions-bar strong { color:#70e2d7 !important; }
+  .home-btn {
+    border: 1px solid rgba(255,255,255,.45) !important;
+    background: rgba(255,255,255,.08) !important;
+    color: #fff !important;
+    border-radius: 9px !important;
+  }
+  .home-btn:hover { background:#27c2b8 !important; color:#102a43 !important; }
+  .header {
+    background: linear-gradient(110deg,#102a43 0%,#173f5f 57%,#1d6572 100%) !important;
+    color:#fff !important;
+    border-bottom:4px solid #27c2b8 !important;
+    padding: clamp(22px,4vw,44px) clamp(16px,4vw,48px) 30px !important;
+    margin-bottom:24px !important;
+  }
+  .header .orientation-banner {
+    width:min(100%,1280px) !important;
+    border:2px solid #ffbd59 !important;
+    border-radius:16px !important;
+    box-shadow:0 18px 40px rgba(0,0,0,.25) !important;
+  }
+  .header h1 {
+    max-width:1100px !important;
+    color:#fff !important;
+    font-size:clamp(25px,3.4vw,42px) !important;
+    line-height:1.2 !important;
+    margin:20px auto 10px !important;
+    letter-spacing:-.5px;
+  }
+  .header h2 { color:#70e2d7 !important; font-size:clamp(17px,2vw,23px) !important; }
+  .header h3 { color:#d7e8f2 !important; font-size:14px !important; margin-top:5px; }
+  .timer-wrapper { margin:22px auto 18px !important; }
+  .timer {
+    background:#e2f7f4 !important;
+    color:#087d78 !important;
+    border:1px solid #a8e9e2 !important;
+    box-shadow:0 5px 18px rgba(23,63,95,.08) !important;
+    font-size:17px !important;
+  }
+  .container {
+    width:min(92%,1280px) !important;
+    background:#fff !important;
+    color:#17324d !important;
+    padding:clamp(16px,3vw,32px) !important;
+    border:1px solid #e0e9f0 !important;
+    border-radius:18px !important;
+    box-shadow:0 10px 35px rgba(23,63,95,.08) !important;
+  }
+  .info-table { border-radius:12px !important; }
+  .info-table td {
+    border:1px solid #dce7ef !important;
+    color:#17324d !important;
+    padding:11px 12px !important;
+  }
+  .info-table td.label {
+    background:#e8f7f5 !important;
+    color:#087d78 !important;
+  }
+  .info-table input {
+    border:1px solid #cbdbe5 !important;
+    border-radius:8px !important;
+    background:#f8fbfd !important;
+    color:#17324d !important;
+    min-height:36px;
+  }
+  .section-card {
+    background:#f8fbfd !important;
+    border:1px solid #dce7ef !important;
+    border-radius:14px !important;
+  }
+  .passage-header { border-bottom-color:#dce7ef !important; }
+  .passage-header h3 { color:#087d78 !important; }
+  .reading-passage-text p { color:#334f65 !important; }
+  .question {
+    background:#fff !important;
+    color:#17324d !important;
+    border:1px solid #dce7ef !important;
+    border-radius:12px !important;
+    box-shadow:0 4px 14px rgba(23,63,95,.05);
+  }
+  .question-title { color:#17324d !important; line-height:1.5; }
+  .choice {
+    background:#f4f8fb !important;
+    color:#334f65 !important;
+    border:1px solid #dce7ef !important;
+    border-radius:9px !important;
+  }
+  .choice:hover {
+    background:#e4f7f5 !important;
+    border-color:#27c2b8 !important;
+  }
+  .choice.selected {
+    background:#d7f5f1 !important;
+    color:#102a43 !important;
+    border-color:#27c2b8 !important;
+    box-shadow:inset 0 0 0 1px #27c2b8;
+  }
+  .question.locked .choice { opacity:.62; }
+  .question.locked .choice.selected { opacity:1; }
+  button { border-radius:9px !important; }
+  .btn-submit {
+    background:#102a43 !important;
+    color:#fff !important;
+    box-shadow:0 5px 14px rgba(16,42,67,.15);
+  }
+  .btn-submit:hover { background:#173f5f !important; box-shadow:0 8px 20px rgba(16,42,67,.2) !important; }
+  .btn-print {
+    background:#087d78 !important;
+    color:#fff !important;
+  }
+  .btn-print:hover { background:#066b66 !important; }
+  #result {
+    background:#e8f7f5 !important;
+    color:#17324d !important;
+    border:1px solid #a8e9e2 !important;
+    border-radius:12px !important;
+  }
+  #startModalOverlay {
+    background:linear-gradient(120deg,rgba(16,42,67,.98),rgba(23,63,95,.98),rgba(29,101,114,.98)) !important;
+    color:#fff !important;
+  }
+  #startModalOverlay h2 {
+    color:#70e2d7 !important;
+    font-size:clamp(24px,3vw,36px) !important;
+    max-width:900px;
+    line-height:1.2;
+  }
+  #startModalOverlay p { color:#d7e8f2 !important; }
+  .btn-start-exam {
+    background:#ffbd59 !important;
+    color:#102a43 !important;
+    box-shadow:0 8px 24px rgba(0,0,0,.18) !important;
+  }
+  .btn-start-exam:hover { background:#ffd18a !important; }
+  #retakeModalOverlay { background:rgba(6,22,38,.78) !important; }
+  .modal-card {
+    background:#fff !important;
+    color:#17324d !important;
+    border:2px solid #27c2b8 !important;
+    box-shadow:0 20px 55px rgba(6,22,38,.25) !important;
+  }
+  .modal-card h3 { color:#102a43 !important; }
+  .modal-card p { color:#526b7e !important; }
+  .btn-modal-yes { background:#102a43 !important; color:#fff !important; }
+  .btn-modal-no { background:#eaf1f5 !important; color:#17324d !important; border:1px solid #cbdbe5 !important; }
+  .topic-infographic-card {
+    background:#f8fbfd !important;
+    border:1px solid #a8e9e2 !important;
+    box-shadow:0 5px 18px rgba(23,63,95,.08) !important;
+  }
+  .topic-infographic-card h4 { color:#087d78 !important; }
+  footer {
+    background:#102a43 !important;
+    border-top:4px solid #27c2b8 !important;
+    color:#d0e2ed !important;
+  }
+  footer strong { color:#ffbd59 !important; }
+}
+@media screen and (max-width:720px) {
+  .actions-bar { gap:12px; flex-wrap:wrap; }
+  .header { padding:20px 14px 24px !important; }
+  .container { width:94% !important; }
+  .info-table, .info-table tbody, .info-table tr { display:block; width:100%; }
+  .info-table tr { margin-bottom:10px; border:1px solid #dce7ef; border-radius:10px; overflow:hidden; }
+  .info-table td { display:block; width:100% !important; border:0 !important; border-bottom:1px solid #e7eef3 !important; }
+  .info-table td:last-child { border-bottom:0 !important; }
+}
+
+ 
+/* Certificate viewing mode opened from curriculum item 14 */
+body.certificate-view { display:block !important; min-height:100vh; padding:0; background:#f4f8fb; color:#102a43; }
+body.certificate-view > *:not(#certificateViewerControls):not(#certificatePrintArea) { display:none !important; }
+body.certificate-view #certificateViewerControls { display:block !important; }
+body.certificate-view #certificatePrintArea { display:block !important; position:relative !important; inset:auto !important; width:min(1100px,96vw) !important; height:auto !important; min-height:650px; margin:20px auto !important; padding:18px !important; background:#f4f1e9 !important; color:#13233b !important; box-sizing:border-box !important; }
+body.certificate-view #certificatePrintArea .cert-frame { min-height:610px; }
+@media(max-width:700px){body.certificate-view #certificatePrintArea{width:100%!important;margin:0 auto!important;padding:8px!important;min-height:0}body.certificate-view #certificatePrintArea .cert-frame{min-height:0}}
+</style>
+</head>
+
+<body
+oncopy="return false"
+oncut="return false"
+onpaste="return false"
+oncontextmenu="return false"
+ondragstart="return false"
+onselectstart="return false">
+
+<!-- START OVERLAY TO INITIATE FULLSCREEN -->
+<div id="startModalOverlay">
+    <h2>TELEPHONE SKILLS AND CUSTOMER SERVICE — PRE-TEST QUIZ</h2>
+    <p>Chumphon Vocational College — Digital Business Technology Department<br>Teamwork, Professionalism, and Workplace Etiquette</p>
+    <button class="btn-start-exam" onclick="startExamFullscreen()">Click Here to Begin Exam</button>
+</div>
+
+<!-- ACTION BAR WITH INDEX HOME BUTTON -->
+<div class="actions-bar">
+    <a href="index.html" class="home-btn">🏠 Home</a>
+    <div style="font-size: 13px; color: var(--text-muted);">
+        Subject: <strong style="color: var(--accent);">Teamwork, Professionalism, and Workplace Etiquette</strong>
+    </div>
+</div>
+
+<div class="header">
+    <img class="orientation-banner" src="https://cdn.imageurl.net/i/3f853d08-5b0f-456a-a442-001d93dc1642.png" alt="Chumphon Vocational College Internship Orientation">
+    <h1>Internship Preparation Orientation for Higher Vocational Certificate (Diploma) Year-1 Students</h1>
+    <h2>Chumphon Vocational College</h2>
+    <h3>Topic 8 Pre-Test Quiz · 15 Questions · October 30, 2026</h3>
+</div>
+
+<div class="timer-wrapper">
+    <div class="timer" id="timer">Time Remaining: 20:00</div>
+</div>
+
+<div class="container">
+
+<table class="info-table">
+<tr>
+    <td class="label">Course Title</td>
+    <td><input value="Teamwork, Professionalism, and Workplace Etiquette" readonly></td>
+    <td class="label">Course Code</td>
+    <td><input value="Internship Prep." readonly></td>
+</tr>
+<tr>
+    <td class="label">Group Code</td>
+    <td><input value="Year 1 Diploma" readonly></td>
+    <td class="label">Section</td>
+    <td><input value="Higher Vocational Certificate" readonly></td>
+</tr>
+<tr>
+    <td class="label">Schedule & Room</td>
+    <td><input value="October 30, 2026" readonly></td>
+    <td class="label">Instructor</td>
+    <td><input value="Chumphon Vocational College" readonly></td>
+</tr>
+<tr>
+    <td class="label">Student Name</td>
+    <td><input id="studentName" placeholder="Enter full name"></td>
+    <td class="label">Student ID Number</td>
+    <td><input id="studentId" placeholder="Enter Student ID"></td>
+</tr>
+</table>
+
+<div id="questions"></div>
+
+<div style="text-align:center">
+    <button class="btn-submit" onclick="submitExam()">Submit Examination</button>
+    <button class="btn-print" onclick="triggerCertificatePrint()">Save PDF / Print Certificate</button>
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<!-- ELEGANT BUSINESS ENGLISH ACADEMIC CERTIFICATE -->
+<div id="certificateViewerControls" style="display:none;text-align:center;padding:24px;background:#f4f8fb;color:#102a43">
+  <h2 style="margin-bottom:8px">Your Teamwork, Professionalism, and Workplace Etiquette Certificate</h2>
+  <p id="certificateViewerMessage" style="margin-bottom:16px">Your saved exam result is shown below.</p>
+  <button type="button" onclick="window.print()" style="padding:11px 18px;border:0;border-radius:9px;background:#087d78;color:#fff;font-weight:800;cursor:pointer">Print / Save Certificate as PDF</button>
+  <button type="button" onclick="window.location.href='teamwork_professionalism_workplace_etiquette_pretest.html'" style="padding:11px 18px;border:0;border-radius:9px;background:#102a43;color:#fff;font-weight:800;cursor:pointer;margin-left:8px">Back to Examination</button>
+</div>
+<div id="certificatePrintArea">
+    <div class="cert-frame">
+        <div class="cert-watermark" aria-hidden="true">DBT</div>
+        <div class="cert-topline">TOPIC 8 · DIGITAL BUSINESS TECHNOLOGY VOCABULARY</div>
+        <div class="cert-header">
+            <img src="https://image2url.com/r2/default/images/1769014503355-aed3a663-edee-4712-974b-a5aa8787a845.png" class="cert-logo" alt="Chumphon Vocational College Logo">
+            <div class="cert-header-copy">
+                <div class="cert-inst-title">Chumphon Vocational College</div>
+                <div class="cert-subtitle">Teamwork, Professionalism, and Workplace Etiquette · Topic 8</div>
+            </div>
+            <div class="cert-subject-mark">TOPIC 8<br>ASSESSMENT</div>
+        </div>
+
+        <div class="cert-title-area">
+            <div class="cert-eyebrow">CHUMPHON VOCATIONAL COLLEGE · OCTOBER 30, 2026</div>
+            <div class="cert-main-title">Certificate of Achievement: Teamwork, Professionalism, and Workplace Etiquette</div>
+            <div class="cert-rule"><span></span><span class="cert-diamond">◆</span><span></span></div>
+            <div class="cert-recipient-label">PRESENTED TO</div>
+            <div class="cert-student-name" id="certStudentName">Student Name</div>
+            <div class="cert-meta-info">STUDENT ID: <span id="certStudentId">—</span> <span class="meta-divider">|</span> HIGHER VOCATIONAL CERTIFICATE (DIPLOMA) · YEAR 1</div>
+        </div>
+
+        <div class="cert-body">
+            This certificate recognizes the student's achievement in <strong>Topic 8: Teamwork, Professionalism, and Workplace Etiquette</strong> at Chumphon Vocational College. The assessment focuses on cooperation, respect, responsibility, professional communication, accepting feedback, following workplace rules, and protecting confidential information.
+        </div>
+
+        <div class="cert-score-card">
+            <div class="cert-score-item">
+                <span class="cert-score-label">TOPIC 8 ASSESSMENT SCORE</span>
+                <span class="cert-score-val"><span id="certRawScore">0</span><small> / 15</small></span>
+            </div>
+            <div class="cert-score-divider"></div>
+            <div class="cert-score-item">
+                <span class="cert-score-label">PERCENTAGE SCORE</span>
+                <span class="cert-score-val"><span id="certWeightedScore">0.00</span><small> %</small></span>
+            </div>
+        </div>
+
+        <div class="cert-footer-grid">
+            <div class="cert-date-block">
+                <div class="cert-footer-label">PROGRAM DETAILS</div>
+                <strong>Topic:</strong> Teamwork, Professionalism, and Workplace Etiquette<br>
+                <strong>Course:</strong> Teamwork, Professionalism, and Workplace Etiquette<br>
+                <strong>Date:</strong> <span id="certDate">October 30, 2026</span><br>
+                <strong>Institution:</strong> Chumphon Vocational College
+            </div>
+
+            <div class="cert-signature-block">
+                <div class="cert-signature-script" aria-label="Stylized signature">J. C. G. Bundalian</div>
+                <div class="cert-signature-line"></div>
+                <div class="cert-teacher-name">Mr. Jose Cer Gapay Bundalian</div>
+                <div class="cert-teacher-title">Internship Preparation Orientation</div>
+            </div>
+        </div>
+        <div class="cert-bottomline">TEAMWORK · PROFESSIONALISM · WORKPLACE ETIQUETTE</div>
+    </div>
+</div>
+
+<!-- POPUP MODAL FOR RETAKE QUESTION -->
+<div id="retakeModalOverlay">
+    <div class="modal-card">
+        <h3>Examination Recorded</h3>
+        <p>Your final examination score has been recorded.<br><br><strong>Would you like to take the test again?</strong></p>
+        <div class="modal-actions">
+            <button class="btn-modal-yes" onclick="retakeExamWithoutRestrictions()">Yes (Retake)</button>
+            <button class="btn-modal-no" onclick="closeRetakeModal()">No (Close)</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 <strong>Chumphon Vocational College</strong> — Digital Office Management and Marketing Department &mdash; All Rights Reserved.</p>
+</footer>
+
+<script>
+let restrictionsActive = true;
+let examSubmitted = false;
+
+/* START EXAM AND ENTER FULLSCREEN AUTOMATICALLY */
+function startExamFullscreen() {
+    document.getElementById("startModalOverlay").style.display = "none";
+    requestFullscreenMode();
+}
+
+function requestFullscreenMode() {
+    const el = document.documentElement;
+    if (el.requestFullscreen) {
+        el.requestFullscreen().catch(() => {});
+    } else if (el.webkitRequestFullscreen) {
+        el.webkitRequestFullscreen();
+    } else if (el.msRequestFullscreen) {
+        el.msRequestFullscreen();
+    }
+}
+
+// Automatically trigger on page load
+window.addEventListener("DOMContentLoaded", () => {
+    requestFullscreenMode();
+});
+
+// ESC KEY IS UNRESTRICTED
+document.addEventListener('keydown', function(e){
+    if (!restrictionsActive) return;
+    
+    // Ctrl key security block (Copy/Paste/Print/Save)
+    if(e.ctrlKey && ['c','v','p','C','V','P','s','u','x'].includes(e.key)){
+        e.preventDefault();
+        alert("Copying, pasting, saving, and printing shortcuts are disabled.");
+    }
+});
+
+// Detect PrintScreen
+document.addEventListener('keyup', function(e){
+    if (!restrictionsActive) return;
+    if(e.key === "PrintScreen" || e.keyCode === 44){
+        alert("Screenshots are not allowed!");
+        document.body.classList.add("flash-alert");
+        setTimeout(()=>document.body.classList.remove("flash-alert"),2000);
+    }
+});
+
+// Warn on blur
+window.addEventListener('blur', function(){
+    if (!restrictionsActive) return;
+    alert("Do not leave the exam window!");
+});
+</script>
+
+<script>
+let timeLeft=1200;
+setInterval(()=>{
+    let m=Math.floor(timeLeft/60);
+    let s=timeLeft%60;
+    document.getElementById("timer").textContent=
+    `Time Remaining: ${m}:${s.toString().padStart(2,"0")}`;
+    if(timeLeft > 0) timeLeft--;
+},1000);
+
+// Questions Array
+const questions = [
+    {"type": "section", "title": "Topic 8: Teamwork, Professionalism, and Workplace Etiquette", "paragraphs": ["Pre-Test Quiz: Choose the best answer about cooperation, respect, responsibility, professional behavior, feedback, workplace rules, and confidentiality."]},
+    {"q": "1. Your team is preparing a presentation and one member is having difficulty. What should you do?", "o": ["Ignore the member and finish only your part", "Offer help and discuss how the team can complete the task together", "Complain about the member to everyone", "Do the task without telling the team"], "c": 1},
+    {"q": "2. What does “teamwork” mean?", "o": ["Working together toward a shared goal", "Competing with every coworker", "Doing only easy tasks", "Avoiding communication"], "c": 0},
+    {"q": "3. You arrive at work and see your supervisor. Which action shows professional etiquette?", "o": ["Keep looking at your phone", "Walk past without acknowledging them", "Greet the supervisor politely", "Shout across the office"], "c": 2},
+    {"q": "4. A coworker gives you constructive feedback about your report. What is the best response?", "o": ["Argue immediately", "Thank them, listen carefully, and improve the report", "Ignore every suggestion", "Tell other coworkers the feedback was unfair"], "c": 1},
+    {"q": "5. What does “punctuality” mean?", "o": ["Leaving tasks for coworkers", "Taking long breaks", "Finishing only when reminded", "Being on time"], "c": 3},
+    {"q": "6. You accidentally make a mistake that affects your team's work. What should you do?", "o": ["Admit the mistake, inform the appropriate person, and help correct it", "Hide it and hope nobody notices", "Blame the newest team member", "Delete the work without telling anyone"], "c": 0},
+    {"q": "7. Which behavior shows respect for coworkers?", "o": ["Interrupting whenever you disagree", "Making jokes about their mistakes", "Listening when others speak and considering their ideas", "Taking credit for their work"], "c": 2},
+    {"q": "8. A coworker asks you to share a confidential customer document with an unauthorized person. What should you do?", "o": ["Send it because the coworker asked", "Post it in the group chat", "Copy it to your personal account", "Do not share it and follow workplace confidentiality rules"], "c": 3},
+    {"q": "9. What is the best way to handle a disagreement during a team task?", "o": ["Discuss the issue calmly and focus on a solution", "Raise your voice until others agree", "Stop speaking to the team", "Spread rumors about the other person"], "c": 0},
+    {"q": "10. Your team finishes a project successfully. What is a professional response?", "o": ["Claim that you did all the work", "Recognize the team's contributions and thank the members", "Criticize the members who worked slowly", "Ignore the team's effort"], "c": 1},
+    {"q": "11. What does “accountability” mean at work?", "o": ["Letting others take responsibility for your tasks", "Avoiding difficult assignments", "Taking responsibility for your actions and work", "Never asking for feedback"], "c": 2},
+    {"q": "12. A coworker is speaking to a customer on the phone. How should you behave nearby?", "o": ["Play a video loudly", "Interrupt to discuss an unrelated matter", "Talk loudly to another coworker", "Keep your voice low and avoid disturbing the conversation"], "c": 3},
+    {"q": "13. You are assigned a task but will not finish it by the agreed deadline. What should you do?", "o": ["Inform your supervisor early and explain the situation", "Say nothing until the deadline passes", "Leave the task for another person without asking", "Mark the task complete even though it is unfinished"], "c": 0},
+    {"q": "14. Which action demonstrates integrity?", "o": ["Changing records to hide an error", "Being honest and following workplace rules even when nobody is watching", "Taking office supplies for personal use without permission", "Sharing a coworker's private information"], "c": 1},
+    {"q": "15. What is a good way to build trust in a team?", "o": ["Make promises you cannot keep", "Keep important information from teammates", "Communicate honestly, do your share, and follow through on commitments", "Take credit for other people's ideas"], "c": 2}
+]
+
+const topicInfographics = {
+  1: { title: 'Topic 8: Teamwork, Professionalism, and Workplace Etiquette', src: "https://cdn.imageurl.net/i/b0ae22e5-fa9b-4723-9765-2323eb499f66.png" },
+  2: { title: 'Topic 8: Teamwork, Professionalism, and Workplace Etiquette', src: "https://cdn.imageurl.net/i/b0ae22e5-fa9b-4723-9765-2323eb499f66.png" },
+  3: { title: 'Topic 8: Teamwork, Professionalism, and Workplace Etiquette', src: "https://cdn.imageurl.net/i/b0ae22e5-fa9b-4723-9765-2323eb499f66.png" }
+};
+
+const qDiv = document.getElementById("questions");
+let userAnswers = [];
+let questionIndices = [];
+
+let qCounter = 0;
+let currentGridContainer = null;
+
+questions.forEach((item) => {
+    if (item.type === "section") {
+        currentGridContainer = null;
+        
+        let sec = document.createElement("div");
+        sec.className = "section-card";
+        
+        let headerHtml = `<div class="passage-header"><h3>${item.title}</h3></div>`;
+        if(item.image) {
+            headerHtml += `<div class="passage-img-container"><img src="${item.image}" alt="${item.title}" class="passage-img"></div>`;
+        }
+        
+        let pText = `<div class="reading-passage-text">`;
+        item.paragraphs.forEach(p => {
+            pText += `<p>${p}</p>`;
+        });
+        pText += `</div>`;
+        
+        sec.innerHTML = headerHtml + pText;
+        qDiv.appendChild(sec);
+    } else {
+        qCounter++;
+        let qIndex = qCounter - 1;
+        userAnswers[qIndex] = null;
+        questionIndices[qIndex] = item.c;
+
+        if (!currentGridContainer) {
+            currentGridContainer = document.createElement("div");
+            currentGridContainer.className = "questions-grid";
+            qDiv.appendChild(currentGridContainer);
+        }
+
+        let box = document.createElement("div");
+        box.className = "question";
+        box.id = `q_box_${qIndex}`;
+        box.innerHTML = `<div class="question-title">${item.q}</div>`;
+        
+        let choiceWrapper = document.createElement("div");
+        item.o.forEach((opt, idx) => {
+            let d = document.createElement("div");
+            d.className = "choice";
+            d.textContent = `${String.fromCharCode(65 + idx)}. ${opt}`;
+            
+            d.onclick = () => {
+                if (examFrozen && restrictionsActive) return;
+                
+                if (box.classList.contains("locked")) return;
+                
+                userAnswers[qIndex] = idx;
+                d.classList.add("selected");
+                box.classList.add("locked");
+            };
+            choiceWrapper.appendChild(d);
+        });
+        box.appendChild(choiceWrapper);
+        currentGridContainer.appendChild(box);
+
+        // At the end of Topics 1–5, place the matching infographic in the right-hand grid cell.
+        if (qCounter % 5 === 0 && topicInfographics[qCounter / 5]) {
+            const topicNumber = qCounter / 5;
+            const topic = topicInfographics[topicNumber];
+            const topicCard = document.createElement("div");
+            topicCard.className = "topic-infographic-card";
+            topicCard.innerHTML = `<h4>${topic.title}</h4><img src="${topic.src}" alt="${topic.title}" title="Click to view larger" onclick="window.open(this.src, '_blank')">`;
+            currentGridContainer.appendChild(topicCard);
+            currentGridContainer = null;
+        }
+    }
+});
+
+function calculateScore() {
+    let raw = 0;
+    userAnswers.forEach((ans, i) => {
+        if (ans === questionIndices[i]) {
+            raw++;
+        }
+    });
+    const total = questions.filter(item => item.type !== "section").length;
+    const percentage = (raw / total * 100).toFixed(2);
+    return { raw, percentage, total };
+}
+
+function submitExam(){
+    if (examSubmitted) return;
+    examSubmitted = true;
+    const { raw, percentage, total } = calculateScore();
+    
+    document.querySelectorAll('.choice').forEach(el => el.style.pointerEvents = 'none');
+
+    const studentName = document.getElementById("studentName").value.trim();
+    const studentId = document.getElementById("studentId").value.trim();
+    try {
+        localStorage.setItem("teamworkProfessionalismWorkplaceEtiquetteExamResult", JSON.stringify({
+            studentName: studentName || "Student Name",
+            studentId: studentId || "N/A",
+            raw, percentage, total,
+            date: new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
+            completed: true
+        }));
+    } catch (e) { console.warn("Could not save exam result for certificate viewing.", e); }
+
+    const resultDiv = document.getElementById("result");
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = `
+        <h2 style="color:var(--accent); margin-bottom:10px;">TELEPHONE SKILLS AND CUSTOMER SERVICE — QUIZ RESULT</h2>
+        <p style="font-size:18px; margin-bottom:8px;">Digital Business Technology Department · Teamwork, Professionalism, and Workplace Etiquette</p>
+        <div style="font-size:22px; font-weight:bold; margin-top:12px; color:#102a43;">
+            Raw Score: ${raw} / 15<br>
+            Percentage: <span style="color:#087d78;">${percentage}%</span>
+        </div>
+    `;
+    
+    resultDiv.scrollIntoView({ behavior: 'smooth' });
+
+    setTimeout(() => {
+        document.getElementById("retakeModalOverlay").style.display = "flex";
+    }, 600);
+}
+
+function triggerCertificatePrint() {
+    if (!examSubmitted) {
+        alert("Please submit and finish the examination before saving the certificate.");
+        return;
+    }
+    const nameInput = document.getElementById("studentName").value.trim();
+    const idInput = document.getElementById("studentId").value.trim();
+    
+    const { raw, percentage, total } = calculateScore();
+
+    document.getElementById("certStudentName").innerText = nameInput !== "" ? nameInput : "Student Name";
+    document.getElementById("certStudentId").innerText = idInput !== "" ? idInput : "N/A";
+    document.getElementById("certRawScore").innerText = raw;
+    document.getElementById("certWeightedScore").innerText = percentage;
+    document.getElementById("certDate").innerText = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+
+    window.print();
+}
+
+function closeRetakeModal() {
+    document.getElementById("retakeModalOverlay").style.display = "none";
+}
+
+function retakeExamWithoutRestrictions() {
+    examSubmitted = false;
+    restrictionsActive = false;
+    
+    examFrozen = false;
+    document.body.classList.remove("freeze");
+    document.getElementById("securityOverlay").style.display = "none";
+    document.getElementById("retakeModalOverlay").style.display = "none";
+    document.getElementById("result").style.display = "none";
+
+    userAnswers = new Array(15).fill(null);
+    document.querySelectorAll('.question').forEach(q => {
+        q.classList.remove('locked');
+    });
+    document.querySelectorAll('.choice').forEach(c => {
+        c.classList.remove('selected');
+        c.style.pointerEvents = 'auto';
+        c.style.opacity = '1';
+    });
+
+    timeLeft = 1200;
+
+    alert("Restrictions have been removed! You can now retake the exam freely.");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+<script>
+/* ===============================
+   STRICT EXAM SECURITY SYSTEM
+================================ */
+
+window.addEventListener("beforeunload", function (e) {
+    if (!restrictionsActive) return;
+    e.preventDefault();
+    e.returnValue = "Exam in progress. Leaving will submit your exam.";
+});
+
+["copy","paste","cut","contextmenu"].forEach(event=>{
+    document.addEventListener(event,e=>{
+        if (!restrictionsActive) return;
+        e.preventDefault();
+        alert("Action disabled during examination.");
+    });
+});
+
+document.addEventListener("selectstart", e => {
+    if (!restrictionsActive) return;
+    e.preventDefault();
+});
+
+let examLocked = false;
+
+function securityViolation(message){
+    if (!restrictionsActive || examLocked) return;
+    examLocked = true;
+
+    alert(message + "\nYour exam will be submitted.");
+
+    submitExam();
+}
+
+document.addEventListener("visibilitychange", function(){
+    if (!restrictionsActive) return;
+    if (document.hidden) {
+        securityViolation("You left the exam window!");
+    }
+});
+
+let touchStartY = 0;
+document.addEventListener("touchstart", e=>{
+    if (!restrictionsActive) return;
+    touchStartY = e.touches[0].clientY;
+});
+
+document.addEventListener("touchmove", e=>{
+    if (!restrictionsActive) return;
+    let touchMoveY = e.touches[0].clientY;
+    if(Math.abs(touchMoveY - touchStartY) > 120){
+        securityViolation("Gesture detected!");
+    }
+});
+
+document.addEventListener('gesturestart', e => { if (restrictionsActive) e.preventDefault(); });
+document.addEventListener('gesturechange', e => { if (restrictionsActive) e.preventDefault(); });
+document.addEventListener('gestureend', e => { if (restrictionsActive) e.preventDefault(); });
+
+</script>
+
+<audio id="alarmSound" loop>
+    <source src="https://image2url.com/r2/default/audio/1769311028308-f1317f8e-a263-48aa-b094-95803b516508.mp3" type="audio/mpeg">
+</audio>
+
+<div id="securityOverlay">
+    <h1>⚠ EXAM VIOLATION DETECTED ⚠<br>
+    SCREENSHOT AND COPY PASTE ARE NOT ALLOWED</h1>
+</div>
+
+<script>
+/* ===============================
+   MAXIMUM EXAM SECURITY SYSTEM
+================================ */
+
+let examFrozen = false;
+
+function freezeExam(reason){
+    if (!restrictionsActive || examFrozen) return;
+    examFrozen = true;
+
+    document.body.classList.add("freeze");
+    document.getElementById("securityOverlay").style.display="flex";
+
+    const alarm=document.getElementById("alarmSound");
+    alarm.volume=1;
+    alarm.play().catch(()=>{});
+
+    alert(reason + "\nExam will be submitted automatically.");
+
+    setTimeout(()=>{
+        submitExam();
+    },3000);
+}
+
+</script>
+
+ 
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has("certificate")) return;
+  document.body.classList.add("certificate-view");
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem("teamworkProfessionalismWorkplaceEtiquetteExamResult") || "null"); } catch(e) {}
+  const message = document.getElementById("certificateViewerMessage");
+  if (!saved || !saved.completed) {
+    if (message) message.textContent = "No completed exam result was found in this browser yet. Please complete and submit the examination first, using the same browser and website.";
+    document.getElementById("certificatePrintArea").style.display = "none";
+    return;
+  }
+  document.getElementById("certStudentName").textContent = saved.studentName || "Student Name";
+  document.getElementById("certStudentId").textContent = saved.studentId || "N/A";
+  document.getElementById("certRawScore").textContent = saved.raw;
+  document.getElementById("certWeightedScore").textContent = saved.percentage;
+  document.getElementById("certDate").textContent = saved.date || "";
+})();
+</script>
+</body>
+</html>
